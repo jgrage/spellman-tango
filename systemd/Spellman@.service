@@ -1,0 +1,16 @@
+# /usr/local/lib/systemd/system/Spellman@.service
+[Unit]
+Description=Tango device server for BLiX Spellman Controller %I
+Requires=tango-db.service
+After=tango-db.service
+
+[Service]
+Type=simple
+User=tango
+Group=tango
+Environment=TANGO_HOST=localhost:10000
+ExecStart=/usr/local/bin/Spellman %i -v4
+
+[Install]
+WantedBy=tango.target
+

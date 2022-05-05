@@ -1,0 +1,3 @@
+Configuration template for a Spellman device server.
+Use this template to create a config file in /opt/tango/etc for your device server.
+The name of the config file must match the instance name: ${INSTANCE_NAME}.conf
