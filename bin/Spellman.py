@@ -213,6 +213,9 @@ class Spellman(Device):
     def enable(self):
         self.info_stream("enable DAC outputs")
         mnemonic = ":ON"
+        
+        self.set_voltage(0.0)
+        self.set_current(0.0)
         self.connection.send(mnemonic)
         response = self.connection.receive()
         return response
